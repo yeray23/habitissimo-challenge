@@ -17,6 +17,11 @@ Finally, execute the following command on the application root folder:
 ```
 npm install
 ```
+<strong>NOTE: </strong> You may need a 'sudo' installation in Linux and MacOS. 
+In this case, type the following command:
+```
+sudo npm install
+``` 
 
 ## How to run
 On the application root folder execute the following command:
@@ -27,6 +32,9 @@ After the compilation, you will be able to open the website with the link below:
 ```
 http://localhost:8080/
 ```
+<strong>IMPORTANT NOTE: </strong> In case of not receiving data from the Habitissimo API, 
+it is due to a browser conflict error with CORS. You may need to follow the instructions in this link (for Chrome only):
+https://alfilatov.com/posts/run-chrome-without-cors/     
 
 ## Project structure
 The application is composed of one root component that has several nested components. 
