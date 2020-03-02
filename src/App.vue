@@ -1,29 +1,39 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <div class="container">
+      <nav class="navbar p-3">
+        <a class="navbar-brand" href="#"
+           title="habitissimo - Reformas y Servicios para el Hogar">
+          <img src="https://es.habcdn.com/static/img/web-logo.2x.png"
+               alt="habitissimo - Reformas y Servicios para el Hogar"
+               title="habitissimo - Reformas y Servicios para el Hogar">
+        </a>
+      </nav>
+    </div>
+    <div id="budget" class="container pt-5 h-100">
+      <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-12">
+          <Budget></Budget>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+  // @ts-ignore
+  import Budget from "@/components/Budget"
+  import 'bootstrap/dist/css/bootstrap.min.css'
 
-@Component({
-  components: {
-    HelloWorld,
-  },
-})
-export default class App extends Vue {}
+  export default {
+    components: {
+      Budget
+    }
+  }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .navbar-brand img {
+    width: 250px;
+  }
 </style>
